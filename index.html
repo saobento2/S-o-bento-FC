@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>São Bento FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo São Bento FC" class="logo">
+        <h1>São Bento Futebol Clube</h1>
+    </header>
+    <nav>
+        <button onclick="showTab('temporada')">Temporada</button>
+        <button onclick="showTab('elenco')">Elenco</button>
+    </nav>
+    <section id="temporada" class="tab active">
+        <h2>Jogos da Temporada</h2>
+        <ul>
+            <li>São Bento 1 x 0 Time do Dex - 16/05 - 21:00 - Ser Sadia</li>
+            <li>São Bento x Real Madruga - A definir</li>
+            <li>São Bento x Nankatsu - A definir</li>
+        </ul>
+    </section>
+    <section id="elenco" class="tab">
+        <h2>Elenco</h2>
+        <h3>Goleiros</h3>
+        <ul>
+            <li>Igor Lima - Camisa 2</li>
+        </ul>
+        <h3>Linha</h3>
+        <ul>
+            <li>Davi Gonçalves - Camisa 7</li>
+            <li>Cadu - Camisa 10</li>
+            <li>Mika - Camisa 11</li>
+            <li>Enzo - Camisa (sem número)</li>
+            <li>Wesley - Camisa (sem número)</li>
+            <li>Luciano (Capitão) - Camisa (sem número)</li>
+            <li>David Maciel - Camisa 74</li>
+        </ul>
+    </section>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
